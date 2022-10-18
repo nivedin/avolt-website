@@ -404,6 +404,8 @@ ScrollTrigger.matchMedia({
     powerPackVideo.loop = true;
     powerPackSixVideo.autoplay = true;
     powerPackSixVideo.loop = true;
+    powerPackVideo.load();
+    powerPackSixVideo.load();
   },
 });
 
