@@ -1,0 +1,580 @@
+main {
+  overflow: hidden;
+}
+
+.hero__section {
+  background-color: #000;
+}
+.hero__section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  min-height: 90vh;
+}
+.hero__section .container img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 800px) {
+  .hero__section .container img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+.hero__section h1 {
+  font-size: 10vw;
+}
+
+.about__us {
+  padding: 5rem;
+  background-color: white;
+  color: #000;
+}
+@media screen and (max-width: 800px) {
+  .about__us {
+    padding: 3rem 2rem;
+  }
+}
+.about__us .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about__us h2 {
+  font-size: 5vw;
+  font-weight: 800;
+}
+@media screen and (max-width: 800px) {
+  .about__us h2 {
+    font-size: 10vw;
+  }
+}
+.about__us p {
+  margin-top: 2rem;
+  max-width: 70%;
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 800px) {
+  .about__us p {
+    max-width: 100%;
+  }
+}
+.about__us .about__image {
+  padding: 100px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .powerpack__energy {
+    min-height: 100vh;
+  }
+}
+.powerpack__energy .video__background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.powerpack__energy .video__background video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.powerpack__energy .right__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  padding: 2rem 4rem;
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .powerpack__energy .right__container {
+    position: relative;
+    color: #000;
+    width: 100%;
+    padding: 2rem;
+  }
+}
+.powerpack__energy .right__container .inner__container h2 {
+  font-size: 6vw;
+  font-weight: 800;
+  line-height: 95%;
+  transition: none;
+}
+@media screen and (max-width: 800px) {
+  .powerpack__energy .right__container .inner__container h2 {
+    font-size: 12vw;
+  }
+}
+.powerpack__energy .right__container .inner__container p {
+  margin: 2.5rem 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+  max-width: 70%;
+  letter-spacing: 0.9px;
+}
+@media screen and (max-width: 800px) {
+  .powerpack__energy .right__container .inner__container p {
+    max-width: 80%;
+  }
+}
+
+.protein__waffer__bar {
+  background-color: white;
+  color: #000;
+  padding: 10rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  overflow: visible;
+}
+@media screen and (max-width: 800px) {
+  .protein__waffer__bar {
+    padding: 10rem 2rem;
+  }
+}
+.protein__waffer__bar .text__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.protein__waffer__bar .text__btn h2 {
+  font-size: 8vw;
+  font-weight: 900;
+  line-height: 105%;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .protein__waffer__bar .text__btn h2 {
+    font-size: 15vw;
+  }
+}
+.protein__waffer__bar .floating__waffer__img img {
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  right: -25%;
+  width: 80%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media screen and (max-width: 800px) {
+  .protein__waffer__bar .floating__waffer__img img {
+    right: -18%;
+  }
+}
+
+.image__grid__btn {
+  background-color: white;
+  color: #000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 10rem 5rem;
+}
+@media screen and (max-width: 800px) {
+  .image__grid__btn {
+    grid-template-columns: auto;
+    padding: 10rem 2rem;
+  }
+}
+.image__grid__btn .left__image__up {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .image__grid__btn .left__image__up {
+    min-height: 35rem;
+    width: 100%;
+  }
+}
+.image__grid__btn .left__image__up img {
+  position: absolute;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image__grid__btn .image__para__btn .right__image__up {
+  min-height: 40rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.image__grid__btn .image__para__btn .right__image__up img {
+  position: absolute;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  .image__grid__btn .image__para__btn .right__image__up {
+    min-height: 25rem;
+    width: 100%;
+  }
+}
+.image__grid__btn .image__para__btn .para__btn {
+  padding: 1rem 2rem;
+  max-width: 70%;
+}
+@media screen and (max-width: 800px) {
+  .image__grid__btn .image__para__btn .para__btn {
+    max-width: 90%;
+    padding: 1rem 0;
+  }
+}
+.image__grid__btn .image__para__btn .para__btn p {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.pack__power__six {
+  background-color: white;
+  color: #000;
+  padding: 0 5rem 8rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .pack__power__six {
+    padding: 0 2rem 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.pack__power__six .heading__text__btn {
+  position: relative;
+  z-index: 2;
+}
+.pack__power__six .heading__text__btn h2 {
+  font-size: 8vw;
+  font-weight: 900;
+  line-height: 95%;
+}
+@media screen and (max-width: 800px) {
+  .pack__power__six .heading__text__btn h2 {
+    font-size: 15vw;
+  }
+}
+.pack__power__six .heading__text__btn h2 span {
+  font-size: 3vw;
+  line-height: 5%;
+}
+@media screen and (max-width: 800px) {
+  .pack__power__six .heading__text__btn h2 span {
+    font-size: 7vw;
+  }
+}
+.pack__power__six .heading__text__btn p {
+  width: 50%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+}
+@media screen and (max-width: 800px) {
+  .pack__power__six .heading__text__btn p {
+    width: 90%;
+  }
+}
+.pack__power__six .video__background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: -40%;
+}
+.pack__power__six .video__background video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 800px) {
+  .pack__power__six .video__background {
+    position: static;
+    width: 125vw;
+  }
+}
+
+.early__bird__discount__section {
+  padding: 4rem 10rem;
+}
+@media screen and (max-width: 800px) {
+  .early__bird__discount__section {
+    padding: 4rem 2rem;
+  }
+}
+.early__bird__discount__section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 800px) {
+  .early__bird__discount__section h2 {
+    font-size: 1.5rem;
+  }
+}
+.early__bird__discount__section .count__meter__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+@media screen and (max-width: 800px) {
+  .early__bird__discount__section .count__meter__container {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+}
+.early__bird__discount__section .count__meter__container .gauge__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  position: relative;
+}
+.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text {
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "bebas_neueregular", cursive;
+}
+.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span.gauge1 {
+  background: linear-gradient(to right, #ffd200, #ff7300);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span.gauge2 {
+  background: linear-gradient(to right, #01e7ff, #0189ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span.gauge3 {
+  background: linear-gradient(to right, #bcfd01, #fcdf01);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 100%;
+  font-family: "bebas_neueregular", cursive;
+}
+.early__bird__discount__section .count__meter__container #myChart1,
+.early__bird__discount__section .count__meter__container #myChart2,
+.early__bird__discount__section .count__meter__container #myChart3 {
+  height: 100%;
+  width: 100%;
+  min-height: 150px;
+  margin: 0 auto;
+  filter: grayscale(0);
+}
+@media screen and (max-width: 800px) {
+  .early__bird__discount__section .count__meter__container #myChart1,
+.early__bird__discount__section .count__meter__container #myChart2,
+.early__bird__discount__section .count__meter__container #myChart3 {
+    min-width: 80vw;
+  }
+}
+.early__bird__discount__section .count__meter__container .zc-ref {
+  display: none;
+}
+
+.signup__early__discount {
+  background-color: white;
+  color: #000;
+  padding: 5rem 8rem;
+}
+@media screen and (max-width: 800px) {
+  .signup__early__discount {
+    padding: 4rem 2rem;
+  }
+}
+.signup__early__discount .form__signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.signup__early__discount .form__signup h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 800px) {
+  .signup__early__discount .form__signup h2 {
+    font-size: 1.2rem;
+  }
+}
+.signup__early__discount .form__signup form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+.signup__early__discount .form__signup form input,
+.signup__early__discount .form__signup form textarea {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(216, 216, 216);
+  margin-bottom: 1.8rem;
+  position: relative;
+  border-radius: 2px;
+}
+.signup__early__discount .form__signup form input:focus,
+.signup__early__discount .form__signup form textarea:focus {
+  outline: none;
+  border-color: #24140f;
+}
+.signup__early__discount .form__signup form .form__group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.signup__early__discount .form__signup form .form__group .label {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  display: inline-block;
+  transition: all 0.2s linear;
+  color: rgb(91, 91, 91);
+}
+.signup__early__discount .form__signup form .form__group .label::after {
+  content: "*";
+  color: rgb(180, 36, 36);
+}
+.signup__early__discount .form__signup form .form__group input {
+  display: block;
+}
+.signup__early__discount .form__signup form .form__group input:focus + .label, .signup__early__discount .form__signup form .form__group input:valid + .label {
+  top: -10px !important;
+  font-size: 0.8rem;
+  background: #fff;
+}
+.signup__early__discount .form__signup form .button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3rem auto;
+}
+.signup__early__discount .form__success__popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.398);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .signup__early__discount .form__success__popup {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+.signup__early__discount .form__success__popup .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 40vw;
+  max-height: 40vh;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 800px) {
+  .signup__early__discount .form__success__popup .container {
+    max-width: 100vw;
+  }
+}
+.signup__early__discount .form__success__popup .container .popup__close {
+  position: absolute;
+  top: 2px;
+  right: 18px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  outline: 0;
+}
+.signup__early__discount .form__success__popup .container .popup__inner__text {
+  padding: 2rem;
+}
+.signup__early__discount .form__success__popup .container .popup__inner__text h4 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .signup__early__discount .form__success__popup .container .popup__inner__text h4 {
+    font-size: 1.4rem;
+  }
+}
+.signup__early__discount .form__success__popup .container .popup__inner__text span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .signup__early__discount .form__success__popup .container .popup__inner__text span {
+    font-size: 1.1rem;
+  }
+}
+.signup__early__discount .form__success__popup.hide {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.signup__early__discount .form__success__popup.hide .container {
+  transform: translateY(100%);
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}/*# sourceMappingURL=home.css.map */

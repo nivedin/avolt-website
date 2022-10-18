@@ -1,0 +1,42 @@
+header {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+header .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+header .header nav {
+  padding-top: 2rem;
+}
+header .header nav ul {
+  display: flex;
+  list-style: none;
+}
+header .header nav ul li {
+  margin-right: 2rem;
+}
+header .header nav ul li:last-child {
+  margin-right: 0;
+}
+header .header nav ul li a {
+  position: relative;
+}
+header .header nav ul li a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -0.5rem;
+  background: #fff;
+  height: 0.05rem;
+  width: 100%;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+header .header nav ul li a:hover:after {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}/*# sourceMappingURL=header.css.map */

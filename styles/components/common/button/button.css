@@ -1,0 +1,39 @@
+.button {
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 1px;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.button.primary {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #000;
+  color: rgb(0, 0, 0);
+}
+.button.primary:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+.button.secondary {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #000;
+  color: rgb(255, 255, 255);
+}
+.button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(0, 0, 0);
+}
+.button.small {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+}
+.button.medium {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+}
+.button.large {
+  padding: 0.4rem 2rem;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=button.css.map */

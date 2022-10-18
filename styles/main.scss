@@ -1,0 +1,9 @@
+@use "./theme";
+@use "./reset";
+@use "./components/header/header.scss";
+@use "./components/footer/footer.scss";
+
+.container {
+  width: 1228px;
+  margin: 0 auto;
+}
