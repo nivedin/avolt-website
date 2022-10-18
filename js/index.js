@@ -420,7 +420,6 @@ ScrollTrigger.matchMedia({
       start: "top 80%",
       end: "bottom 80%",
       scrub: true,
-      markers: true,
       animation: gsap.fromTo(
         aboutUsImage,
         { x: "100%", rotate: 180 },
