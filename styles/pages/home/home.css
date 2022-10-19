@@ -57,6 +57,7 @@ main {
   margin-top: 2rem;
   max-width: 70%;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 @media screen and (max-width: 800px) {
   .about__us p {
@@ -118,7 +119,7 @@ main {
 }
 .powerpack__energy .right__container .inner__container p {
   margin: 2.5rem 0;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.3rem;
   max-width: 70%;
   letter-spacing: 0.9px;
@@ -242,7 +243,7 @@ main {
 .image__grid__btn .image__para__btn .para__btn p {
   margin: 1rem 0;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .pack__power__six {
@@ -277,6 +278,7 @@ main {
 .pack__power__six .heading__text__btn h2 span {
   font-size: 3vw;
   line-height: 5%;
+  font-family: "gilroyextrabold", sans-serif;
 }
 @media screen and (max-width: 800px) {
   .pack__power__six .heading__text__btn h2 span {
@@ -286,7 +288,7 @@ main {
 .pack__power__six .heading__text__btn p {
   width: 50%;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   margin: 1.5rem 0;
 }
 @media screen and (max-width: 800px) {
@@ -361,7 +363,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.8rem;
-  font-family: "bebas_neueregular", cursive;
+  font-family: "bebasregular", cursive;
   font-weight: 600;
 }
 .early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container .minValue,
@@ -369,7 +371,7 @@ main {
   position: absolute;
   top: 82%;
   font-size: 1.05rem;
-  font-family: "bebas_neueregular", cursive;
+  font-family: "bebasregular", cursive;
   font-weight: 600;
 }
 .early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container .minValue {
@@ -383,11 +385,11 @@ main {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: "bebas_neueregular", cursive;
 }
 .early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text span {
   font-size: 3rem;
   font-weight: 800;
+  font-family: "bebasregular", cursive;
 }
 .early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text span.gauge1 {
   background: linear-gradient(to right, #ffd200, #ff7300);
@@ -408,7 +410,7 @@ main {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 100%;
-  font-family: "bebas_neueregular", cursive;
+  font-family: "bebasregular", cursive;
 }
 .early__bird__discount__section .count__meter__container #myChart1,
 .early__bird__discount__section .count__meter__container #myChart2,

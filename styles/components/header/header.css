@@ -23,6 +23,7 @@ header .header nav ul li:last-child {
 }
 header .header nav ul li a {
   position: relative;
+  font-weight: 600;
 }
 header .header nav ul li a:after {
   position: absolute;

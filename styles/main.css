@@ -8,7 +8,7 @@
 *::before {
   padding: 0;
   margin: 0;
-  font-family: "gilroy-mediumuploaded_file", sans-serif;
+  font-family: "gilroylight", sans-serif;
   box-sizing: border-box;
   transition: all 0.1s ease-in-out;
 }
@@ -30,7 +30,7 @@ img {
 }
 
 h2 {
-  font-family: "gilroy-extrabolduploaded_file", sans-serif;
+  font-family: "gilroyextrabold", sans-serif;
 }
 
 header {
@@ -58,6 +58,7 @@ header .header nav ul li:last-child {
 }
 header .header nav ul li a {
   position: relative;
+  font-weight: 600;
 }
 header .header nav ul li a:after {
   position: absolute;
@@ -175,7 +176,7 @@ header .header nav ul li a:hover:after {
 }
 .footer .footer__upper .connect__withus .connect__withus__inner p {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 .footer .footer__upper .connect__withus .social__icons {
   display: flex;

@@ -49,6 +49,7 @@ main {
     margin-top: 2rem;
     max-width: 70%;
     font-size: 1.3rem;
+    font-weight: 600;
     @media screen and (max-width: 800px) {
       max-width: 100%;
     }
@@ -114,7 +115,7 @@ main {
       }
       p {
         margin: 2.5rem 0;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 1.3rem;
         max-width: 70%;
         letter-spacing: 0.9px;
@@ -221,7 +222,7 @@ main {
       p {
         margin: 1rem 0;
         font-size: 1.3rem;
-        font-weight: 500;
+        font-weight: 600;
       }
     }
   }
@@ -252,6 +253,8 @@ main {
       span {
         font-size: 3vw;
         line-height: 5%;
+        font-family: "gilroyextrabold", sans-serif;
+
         @media screen and (max-width: 800px) {
           font-size: 7vw;
         }
@@ -260,7 +263,7 @@ main {
     p {
       width: 50%;
       font-size: 1.3rem;
-      font-weight: 500;
+      font-weight: 600;
       margin: 1.5rem 0;
       @media screen and (max-width: 800px) {
         width: 90%;
@@ -322,7 +325,7 @@ main {
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: 2.8rem;
-          font-family: "bebas_neueregular", cursive;
+          font-family: "bebasregular", cursive;
           font-weight: 600;
         }
         .minValue,
@@ -330,7 +333,7 @@ main {
           position: absolute;
           top: 82%;
           font-size: 1.05rem;
-          font-family: "bebas_neueregular", cursive;
+          font-family: "bebasregular", cursive;
           font-weight: 600;
         }
         .minValue {
@@ -345,10 +348,11 @@ main {
         display: flex;
         align-items: center;
         gap: 10px;
-        font-family: "bebas_neueregular", cursive;
         span {
           font-size: 3rem;
           font-weight: 800;
+          font-family: "bebasregular", cursive;
+
           &.gauge1 {
             background: linear-gradient(to right, #ffd200, #ff7300);
             -webkit-text-fill-color: transparent;
@@ -369,7 +373,7 @@ main {
           font-weight: 600;
           font-size: 1.5rem;
           line-height: 100%;
-          font-family: "bebas_neueregular", cursive;
+          font-family: "bebasregular", cursive;
         }
       }
     }
