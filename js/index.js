@@ -7,8 +7,8 @@ ScrollReveal().reveal(headings, {
   delay: 500,
   duration: 500,
 });
-ScrollReveal().reveal(paras, { delay: 550, duration: 550 });
-ScrollReveal().reveal(images, { delay: 400, duration: 400 });
+ScrollReveal().reveal(paras, { delay: 250, duration: 150 });
+ScrollReveal().reveal(images, { delay: 400, duration: 500 });
 //////scroll-reveal----
 
 //////gauge/////////

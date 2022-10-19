@@ -60,12 +60,6 @@ main {
 }
 
 .powerpack__energy {
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  // grid-gap: 2rem;
-  // padding: 5rem;
-  // background: linear-gradient(to right, #432211, #24140f);
-  // position: relative;
   @media screen and (max-width: 800px) {
     min-height: 100vh;
   }
@@ -79,11 +73,6 @@ main {
       object-fit: contain;
     }
   }
-  // .left__container {
-  //   height: 30rem;
-  //   width: 100%;
-  //   position: relative;
-  // }
   .right__container {
     display: flex;
     flex-direction: column;
@@ -110,7 +99,7 @@ main {
         line-height: 95%;
         transition: none;
         @media screen and (max-width: 800px) {
-          font-size: 12vw;
+          font-size: 15vw;
         }
       }
       p {
@@ -121,6 +110,22 @@ main {
         letter-spacing: 0.9px;
         @media screen and (max-width: 800px) {
           max-width: 80%;
+        }
+      }
+      a {
+        color: #24140f;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0);
+          color: rgb(255, 255, 255);
+        }
+        @media screen and (max-width: 800px) {
+          background-color: rgb(0, 0, 0);
+          border: 1px solid #000;
+          color: rgb(255, 255, 255);
+          &:hover {
+            background-color: rgba(255, 255, 255, 0);
+            color: rgb(0, 0, 0);
+          }
         }
       }
     }
