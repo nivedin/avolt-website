@@ -11,352 +11,96 @@ ScrollReveal().reveal(paras, { delay: 550, duration: 550 });
 ScrollReveal().reveal(images, { delay: 400, duration: 400 });
 //////scroll-reveal----
 
-//gauge
+//////gauge/////////
 
-// window.feed = function (callback) {
-//   var tick = {};
-//   tick.plot0 = Math.ceil(350 + Math.random() * 500);
-//   callback(JSON.stringify(tick));
-// };
+function init__gauge(data) {
+  console.log("data", data);
 
-var myConfig1 = {
-  type: "gauge",
-  globals: {
-    fontSize: 15,
-  },
-  plotarea: {
-    marginTop: 80,
-  },
-  plot: {
-    size: "100%",
-    // valueBox: {
-    //   placement: "center",
-    //   text: "%v", //default
-    //   fontSize: 15,
-    //   rules: [
-    //     {
-    //       rule: "%v >= 700",
-    //       text: "%v<br>EXCELLENT",
-    //     },
-    //     {
-    //       rule: "%v < 700 && %v > 640",
-    //       text: "%v<br>Good",
-    //     },
-    //     {
-    //       rule: "%v < 640 && %v > 580",
-    //       text: "%v<br>Fair",
-    //     },
-    //     {
-    //       rule: "%v <  580",
-    //       text: "%v<br>Bad",
-    //     },
-    //   ],
-    // },
-  },
-  tooltip: {
-    borderRadius: 5,
-  },
-  scaleR: {
-    aperture: 180,
+  opts = {
+    angle: 0,
+    lineWidth: 0.35,
+    radiusScale: 1.1,
+    pointer: {
+      length: 0.41, // // Relative to gauge radius
+      strokeWidth: 0.04,
+      color: "#000000",
+    },
+    staticZones: data.staticZones,
+    limitMax: false,
+    limitMin: false,
+    colorStart: "#6FADCF",
+    colorStop: "#8FC0DA",
+    strokeColor: "#E0E0E0",
+    generateGradient: true,
+    highDpiSupport: true,
+  };
+
+  const target = document.getElementById("myChart" + data.id);
+
+  const gauge = new Gauge(target).setOptions(opts);
+
+  gauge.maxValue = data.maxValue;
+  gauge.setMinValue(data.minValue);
+  gauge.animationSpeed = 52;
+  gauge.set(data.value);
+
+  const chartValue = document.getElementById("mychartValue" + data.id);
+  gauge.setTextField(chartValue);
+
+  const gaugeMinValue = document.getElementById("minValue" + data.id);
+  const gaugeMaxValue = document.getElementById("maxValue" + data.id);
+
+  gaugeMinValue.innerHTML = data.minValue;
+  gaugeMaxValue.innerHTML = data.maxValue;
+}
+
+data = {
+  gauge1: {
+    id: "1",
     minValue: 0,
     maxValue: 250,
-    step: 50,
-    center: {
-      visible: false,
-    },
-    tick: {
-      visible: false,
-    },
-    item: {
-      offsetR: 100,
-      rules: [
-        {
-          rule: "%i == 9",
-          offsetX: 15,
-        },
-      ],
-    },
-    labels: ["0", "", "", "", "", "250"],
-    ring: {
-      size: 50,
-      rules: [
-        {
-          rule: "%v <= 50",
-          backgroundColor: "#ffd200",
-        },
-        {
-          rule: "%v >= 50 && %v < 100",
-          backgroundColor: "#ffb901",
-        },
-        {
-          rule: "%v >= 100 && %v < 150",
-          backgroundColor: "#ff9c00",
-        },
-        {
-          rule: "%v >= 150 && %v < 200",
-          backgroundColor: "#ff8601",
-        },
-        {
-          rule: "%v >= 200",
-          backgroundColor: "#ff7300",
-        },
-      ],
-    },
+    value: Math.floor(Math.random() * 250), //gauge current value
+    staticZones: [
+      { strokeStyle: "#ffd200", min: 0, max: 50 },
+      { strokeStyle: "#ffb901", min: 50, max: 100 },
+      { strokeStyle: "#ff9c00", min: 100, max: 150 },
+      { strokeStyle: "#ff8601", min: 150, max: 200 },
+      { strokeStyle: "#ff7300", min: 200, max: 250 },
+    ],
   },
-  refresh: {
-    type: "feed",
-    transport: "js",
-    url: "feed()",
-    interval: 1500,
-    resetTimeout: 1000,
-  },
-  series: [
-    {
-      values: [0], // starting value
-      backgroundColor: "black",
-      indicator: [10, 0, 0, 0, 0.3],
-      animation: {
-        effect: 2,
-        method: 1,
-        sequence: 4,
-        speed: 900,
-      },
-    },
-  ],
-};
-var myConfig2 = {
-  type: "gauge",
-  globals: {
-    fontSize: 15,
-  },
-  plotarea: {
-    marginTop: 80,
-  },
-  plot: {
-    size: "100%",
-    // valueBox: {
-    //   placement: "center",
-    //   text: "%v", //default
-    //   fontSize: 15,
-    //   rules: [
-    //     {
-    //       rule: "%v >= 700",
-    //       text: "%v<br>EXCELLENT",
-    //     },
-    //     {
-    //       rule: "%v < 700 && %v > 640",
-    //       text: "%v<br>Good",
-    //     },
-    //     {
-    //       rule: "%v < 640 && %v > 580",
-    //       text: "%v<br>Fair",
-    //     },
-    //     {
-    //       rule: "%v <  580",
-    //       text: "%v<br>Bad",
-    //     },
-    //   ],
-    // },
-  },
-  tooltip: {
-    borderRadius: 5,
-  },
-  scaleR: {
-    aperture: 180,
+  gauge2: {
+    id: "2",
     minValue: 250,
     maxValue: 500,
-    step: 50,
-    center: {
-      visible: false,
-    },
-    tick: {
-      visible: false,
-    },
-    item: {
-      offsetR: 100,
-      rules: [
-        {
-          rule: "%i == 9",
-          offsetX: 15,
-        },
-      ],
-    },
-    labels: ["250", "", "", "", "", "500"],
-    ring: {
-      size: 50,
-      rules: [
-        {
-          rule: "%v <= 300",
-          backgroundColor: "#01e7ff",
-        },
-        {
-          rule: "%v >= 300 && %v < 350",
-          backgroundColor: "#00d5ff",
-        },
-        {
-          rule: "%v >= 350 && %v < 400",
-          backgroundColor: "#01beff",
-        },
-        {
-          rule: "%v >= 400 && %v < 450",
-          backgroundColor: "#00a2ff",
-        },
-        {
-          rule: "%v >= 450",
-          backgroundColor: "#0189ff",
-        },
-      ],
-    },
+    value: Math.floor(Math.random() * 250) + 250, //gauge current value
+    staticZones: [
+      { strokeStyle: "#01e7ff", min: 250, max: 300 },
+      { strokeStyle: "#00d5ff", min: 300, max: 350 },
+      { strokeStyle: "#01beff", min: 350, max: 400 },
+      { strokeStyle: "#00a2ff", min: 400, max: 450 },
+      { strokeStyle: "#0189ff", min: 450, max: 500 },
+    ],
   },
-  refresh: {
-    type: "feed",
-    transport: "js",
-    url: "feed()",
-    interval: 1500,
-    resetTimeout: 1000,
-  },
-  series: [
-    {
-      values: [0], // starting value
-      backgroundColor: "black",
-      indicator: [10, 0, 0, 0, 0.3],
-      animation: {
-        effect: 2,
-        method: 1,
-        sequence: 4,
-        speed: 900,
-      },
-    },
-  ],
-};
-var myConfig3 = {
-  type: "gauge",
-  globals: {
-    fontSize: 15,
-  },
-  plotarea: {
-    marginTop: 80,
-  },
-  plot: {
-    size: "100%",
-    // valueBox: {
-    //   placement: "center",
-    //   text: "%v", //default
-    //   fontSize: 15,
-    //   rules: [
-    //     {
-    //       rule: "%v >= 700",
-    //       text: "%v<br>EXCELLENT",
-    //     },
-    //     {
-    //       rule: "%v < 700 && %v > 640",
-    //       text: "%v<br>Good",
-    //     },
-    //     {
-    //       rule: "%v < 640 && %v > 580",
-    //       text: "%v<br>Fair",
-    //     },
-    //     {
-    //       rule: "%v <  580",
-    //       text: "%v<br>Bad",
-    //     },
-    //   ],
-    // },
-  },
-  tooltip: {
-    borderRadius: 5,
-  },
-  scaleR: {
-    aperture: 180,
+  gauge3: {
+    id: "3",
     minValue: 500,
     maxValue: 1000,
-    step: 100,
-    center: {
-      visible: false,
-    },
-    tick: {
-      visible: false,
-    },
-    item: {
-      offsetR: 0,
-      rules: [
-        {
-          rule: "%i == 9",
-          offsetX: 15,
-        },
-      ],
-    },
-    labels: ["500", "", "", "", "", "1000"],
-    ring: {
-      size: 50,
-      rules: [
-        {
-          rule: "%v <= 600",
-          backgroundColor: "#bcfd01",
-        },
-        {
-          rule: "%v >= 600 && %v < 700",
-          backgroundColor: "#d5fe02",
-        },
-        {
-          rule: "%v >= 700 && %v < 800",
-          backgroundColor: "#f1fe01",
-        },
-        {
-          rule: "%v >= 800 && %v < 900",
-          backgroundColor: "#fef301",
-        },
-        {
-          rule: "%v >= 900",
-          backgroundColor: "#fcdf01",
-        },
-      ],
-    },
+    value: Math.floor(Math.random() * 500) + 500, //gauge current value
+    staticZones: [
+      { strokeStyle: "#bcfd01", min: 500, max: 600 },
+      { strokeStyle: "#d5fe02", min: 600, max: 700 },
+      { strokeStyle: "#f1fe01", min: 700, max: 800 },
+      { strokeStyle: "#fef301", min: 800, max: 900 },
+      { strokeStyle: "#fcdf01", min: 900, max: 1000 },
+    ],
   },
-  refresh: {
-    type: "feed",
-    transport: "js",
-    url: "feed()",
-    interval: 1500,
-    resetTimeout: 1000,
-  },
-  series: [
-    {
-      values: [0], // starting value
-      backgroundColor: "black",
-      indicator: [10, 0, 0, 0, 0.3],
-      animation: {
-        effect: 2,
-        method: 1,
-        sequence: 4,
-        speed: 900,
-      },
-    },
-  ],
 };
 
-zingchart.render({
-  id: "myChart1",
-  data: myConfig1,
-  height: 500,
-  width: "100%",
-});
-zingchart.render({
-  id: "myChart2",
-  data: myConfig2,
-  height: 500,
-  width: "100%",
-});
-zingchart.render({
-  id: "myChart3",
-  data: myConfig3,
-  height: 500,
-  width: "100%",
-});
+init__gauge(data["gauge1"]);
+init__gauge(data["gauge2"]);
+init__gauge(data["gauge3"]);
 
-////////////gauge//////////
-
-/////gsap-videos//////
+//////gauge/////////
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.saveStyles(".container-hero div");
 

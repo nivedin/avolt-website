@@ -101,7 +101,6 @@
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
-
     <!-- /meta-favicons// -->
   </head>
   <body>
@@ -221,7 +220,7 @@
         <div class="image__grid__btn container">
           <div class="left__image__up">
             <img
-              src="./assets/images/home/grid-image-1.png"
+              src="./assets/images/home/grid-image-1.jpg"
               alt="grid-image-1"
             />
           </div>
@@ -289,8 +288,13 @@
         <div class="early__bird__discount__section container">
           <h2>Early Bird Discount</h2>
           <div class="count__meter__container">
-            <div class="gauge__text">
-              <div id="myChart1"></div>
+            <div class="gauge__canvas__text">
+              <div class="gauge__container">
+                <canvas id="myChart1"></canvas>
+                <h6 class="mychartValue" id="mychartValue1"></h6>
+                <span class="minValue" id="minValue1"></span>
+                <span class="maxValue" id="maxValue1"></span>
+              </div>
               <div class="gauge__bottom__text">
                 <span class="gauge1"> 25% </span>
                 <p>
@@ -299,20 +303,30 @@
                 </p>
               </div>
             </div>
-            <div class="gauge__text">
-              <div id="myChart2"></div>
+            <div class="gauge__canvas__text">
+              <div class="gauge__container">
+                <canvas id="myChart2"></canvas>
+                <h6 class="mychartValue" id="mychartValue2"></h6>
+                <span class="minValue" id="minValue2"></span>
+                <span class="maxValue" id="maxValue2"></span>
+              </div>
               <div class="gauge__bottom__text">
-                <span class="gauge2"> 25% </span>
+                <span class="gauge2"> 20% </span>
                 <p>
                   DISCOUNT ON <br />
                   FIRST ORDER
                 </p>
               </div>
             </div>
-            <div class="gauge__text">
-              <div id="myChart3"></div>
+            <div class="gauge__canvas__text">
+              <div class="gauge__container">
+                <canvas id="myChart3"></canvas>
+                <h6 class="mychartValue" id="mychartValue3"></h6>
+                <span class="minValue" id="minValue3"></span>
+                <span class="maxValue" id="maxValue3"></span>
+              </div>
               <div class="gauge__bottom__text">
-                <span class="gauge3"> 25% </span>
+                <span class="gauge3"> 15% </span>
                 <p>
                   DISCOUNT ON <br />
                   FIRST ORDER
@@ -457,10 +471,10 @@
     </footer>
 
     <script src="./js/scroll-reveal.js"></script>
-    <script src="./js/zingchart.js"></script>
     <script src="./js/gsap.js"></script>
     <script src="./js/gsap-scrolltrigger.js"></script>
     <script src="./js/jquery.js"></script>
+    <script src="./js/gauge.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/app.js"></script>
   </body>

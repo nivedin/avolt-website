@@ -307,15 +307,41 @@ main {
       flex-direction: column;
       padding: 3rem 0;
     }
-    .gauge__text {
+    .gauge__canvas__text {
       display: flex;
       flex-direction: column;
       flex: 1;
       align-items: center;
       position: relative;
+      padding: 80px 0;
+      .gauge__container {
+        position: relative;
+        .mychartValue {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 2.8rem;
+          font-family: "bebas_neueregular", cursive;
+          font-weight: 600;
+        }
+        .minValue,
+        .maxValue {
+          position: absolute;
+          top: 82%;
+          font-size: 1.05rem;
+          font-family: "bebas_neueregular", cursive;
+          font-weight: 600;
+        }
+        .minValue {
+          left: -6%;
+        }
+        .maxValue {
+          right: -6%;
+        }
+      }
       .gauge__bottom__text {
-        position: absolute;
-        bottom: 60px;
+        padding-top: 30px;
         display: flex;
         align-items: center;
         gap: 10px;

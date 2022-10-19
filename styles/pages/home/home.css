@@ -344,41 +344,67 @@ main {
     padding: 3rem 0;
   }
 }
-.early__bird__discount__section .count__meter__container .gauge__text {
+.early__bird__discount__section .count__meter__container .gauge__canvas__text {
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
   position: relative;
+  padding: 80px 0;
 }
-.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text {
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container {
+  position: relative;
+}
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container .mychartValue {
   position: absolute;
-  bottom: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.8rem;
+  font-family: "bebas_neueregular", cursive;
+  font-weight: 600;
+}
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container .minValue,
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container .maxValue {
+  position: absolute;
+  top: 82%;
+  font-size: 1.05rem;
+  font-family: "bebas_neueregular", cursive;
+  font-weight: 600;
+}
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container .minValue {
+  left: -6%;
+}
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container .maxValue {
+  right: -6%;
+}
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text {
+  padding-top: 30px;
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: "bebas_neueregular", cursive;
 }
-.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span {
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text span {
   font-size: 3rem;
   font-weight: 800;
 }
-.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span.gauge1 {
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text span.gauge1 {
   background: linear-gradient(to right, #ffd200, #ff7300);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span.gauge2 {
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text span.gauge2 {
   background: linear-gradient(to right, #01e7ff, #0189ff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text span.gauge3 {
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text span.gauge3 {
   background: linear-gradient(to right, #bcfd01, #fcdf01);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.early__bird__discount__section .count__meter__container .gauge__text .gauge__bottom__text p {
+.early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__bottom__text p {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 100%;
