@@ -514,6 +514,7 @@ main {
   display: inline-block;
   transition: all 0.2s linear;
   color: rgb(91, 91, 91);
+  font-weight: 600;
 }
 .signup__early__discount .form__signup form .form__group .label::after {
   content: "*";
