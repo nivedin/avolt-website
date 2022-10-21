@@ -19,8 +19,6 @@ ScrollReveal().reveal(images, {
 //////gauge/////////
 
 function init__gauge(data) {
-  console.log("data", data);
-
   opts = {
     angle: 0,
     lineWidth: 0.35,
