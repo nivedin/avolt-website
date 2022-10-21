@@ -8,7 +8,12 @@ ScrollReveal().reveal(headings, {
   duration: 500,
 });
 ScrollReveal().reveal(paras, { delay: 250, duration: 150 });
-ScrollReveal().reveal(images, { delay: 400, duration: 500 });
+ScrollReveal().reveal(images, {
+  scale: 0.85,
+  easing: "cubic-bezier(0.5, 0, 0, 1)",
+  delay: 400,
+  duration: 500,
+});
 //////scroll-reveal----
 
 //////gauge/////////
