@@ -107,51 +107,58 @@ ScrollTrigger.saveStyles(".container-hero div");
 const powerPackVideo = document.querySelector("#power__pack__bar");
 const powerPackSixVideo = document.querySelector("#power__pack__six");
 
-const scrollVideo = (video) => {
-  const videoLength = video.duration;
-  const scrollPosition = document.documentElement.scrollTop;
+// const scrollVideo = (video) => {
+//   const videoLength = video.duration;
+//   const scrollPosition = document.documentElement.scrollTop;
 
-  video.currentTime = Math.floor(
-    (scrollPosition / (document.body.offsetHeight - window.innerHeight)) *
-      videoLength
-  );
+//   video.currentTime = Math.floor(
+//     (scrollPosition / (document.body.offsetHeight - window.innerHeight)) *
+//       videoLength
+//   );
 
-  video.currentTime;
-};
+//   video.currentTime;
+// };
 
-ScrollTrigger.matchMedia({
-  // desktop
-  "(min-width: 800px)": function () {
-    // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
-    // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
+// ScrollTrigger.matchMedia({
+//   // desktop
+//   "(min-width: 800px)": function () {
+//     // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
+//     // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
 
-    ScrollTrigger.create({
-      trigger: powerPackVideo,
-      start: "top-=10%",
-      end: "bottom 80%",
-      onUpdate: () => scrollVideo(powerPackVideo),
-    });
+//     ScrollTrigger.create({
+//       trigger: powerPackVideo,
+//       start: "top-=10%",
+//       end: "bottom 80%",
+//       onUpdate: () => scrollVideo(powerPackVideo),
+//     });
 
-    ScrollTrigger.create({
-      trigger: powerPackSixVideo,
-      start: "top 80%",
-      end: "bottom 80%",
-      onUpdate: () => scrollVideo(powerPackSixVideo),
-      // markers: true,
-    });
-  },
-  // mobile
-  "(max-width: 799px)": function () {
-    // The ScrollTriggers created inside these functions are segregated and get
-    // reverted/killed when the media query doesn't match anymore.
-    powerPackVideo.autoplay = true;
-    powerPackVideo.loop = true;
-    powerPackSixVideo.autoplay = true;
-    powerPackSixVideo.loop = true;
-    powerPackVideo.load();
-    powerPackSixVideo.load();
-  },
-});
+//     ScrollTrigger.create({
+//       trigger: powerPackSixVideo,
+//       start: "top 80%",
+//       end: "bottom 80%",
+//       onUpdate: () => scrollVideo(powerPackSixVideo),
+//       // markers: true,
+//     });
+//   },
+//   // mobile
+//   "(max-width: 799px)": function () {
+//     // The ScrollTriggers created inside these functions are segregated and get
+//     // reverted/killed when the media query doesn't match anymore.
+//     powerPackVideo.autoplay = true;
+//     powerPackVideo.loop = true;
+//     powerPackSixVideo.autoplay = true;
+//     powerPackSixVideo.loop = true;
+//     powerPackVideo.load();
+//     powerPackSixVideo.load();
+//   },
+// });
+
+powerPackVideo.autoplay = true;
+powerPackVideo.loop = true;
+powerPackSixVideo.autoplay = true;
+powerPackSixVideo.loop = true;
+powerPackVideo.load();
+powerPackSixVideo.load();
 
 ////////////gsap-videos///////////
 
