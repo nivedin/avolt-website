@@ -60,9 +60,6 @@ main {
 }
 
 .powerpack__energy {
-  @media screen and (max-width: 800px) {
-    min-height: 100vh;
-  }
   .video__background {
     position: relative;
     height: 100%;
@@ -90,7 +87,7 @@ main {
       position: relative;
       color: #000;
       width: 100%;
-      padding: 2rem;
+      padding: 0 2rem;
     }
     .inner__container {
       h2 {
@@ -99,7 +96,7 @@ main {
         line-height: 95%;
         transition: none;
         @media screen and (max-width: 800px) {
-          font-size: 15vw;
+          display: none;
         }
       }
       p {
@@ -110,6 +107,7 @@ main {
         letter-spacing: 0.9px;
         @media screen and (max-width: 800px) {
           max-width: 80%;
+          margin: 1rem 0 2.5rem 0;
         }
       }
       a {
@@ -129,24 +127,69 @@ main {
         }
       }
     }
+    &.mobile {
+      display: none;
+      @media screen and (max-width: 800px) {
+        display: block;
+        position: absolute;
+        padding: 0;
+        width: 50%;
+        top: 10%;
+        right: -8%;
+        h2 {
+          display: block;
+          color: #ffff;
+          font-size: 10vw;
+        }
+      }
+    }
   }
 }
 
 .protein__waffer__bar {
-  background-color: #ffff;
-  color: #000;
-  padding: 10rem 5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: relative;
-  overflow: visible;
   @media screen and (max-width: 800px) {
-    padding: 10rem 2rem;
+    padding: 50px 0;
+  }
+  .protein__waffer__bar__video {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-left: 9%;
+    @media screen and (max-width: 800px) {
+      padding-left: 0;
+    }
+    .pr video {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .left__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    padding: 2rem 4rem;
+    color: rgb(0, 0, 0);
+    @media screen and (max-width: 800px) {
+      position: relative;
+      color: #000;
+      width: 100%;
+      padding: 2rem;
+      align-items: flex-start;
+    }
   }
   .text__btn {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     h2 {
       font-size: 8vw;
       font-weight: 900;
@@ -157,21 +200,21 @@ main {
       }
     }
   }
-  .floating__waffer__img {
-    img {
-      position: absolute;
-      top: 30%;
-      bottom: 0;
-      right: -25%;
-      width: 80%;
-      height: 70%;
-      object-fit: cover;
-      user-select: none;
-      @media screen and (max-width: 800px) {
-        right: -18%;
-      }
-    }
-  }
+  // .floating__waffer__img {
+  //   img {
+  //     position: absolute;
+  //     top: 30%;
+  //     bottom: 0;
+  //     right: -25%;
+  //     width: 80%;
+  //     height: 70%;
+  //     object-fit: cover;
+  //     user-select: none;
+  //     @media screen and (max-width: 800px) {
+  //       right: -18%;
+  //     }
+  //   }
+  // }
 }
 
 .image__grid__btn {
@@ -183,7 +226,7 @@ main {
   padding: 10rem 5rem;
   @media screen and (max-width: 800px) {
     grid-template-columns: auto;
-    padding: 10rem 2rem;
+    padding: 5rem 2rem;
   }
   .left__image__up {
     position: relative;
@@ -295,7 +338,7 @@ main {
 .early__bird__discount__section {
   padding: 4rem 10rem;
   @media screen and (max-width: 800px) {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
   }
   h2 {
     text-align: center;
@@ -314,6 +357,7 @@ main {
     @media screen and (max-width: 800px) {
       flex-direction: column;
       padding: 3rem 0;
+      gap: 20px;
     }
     .gauge__canvas__text {
       display: flex;
@@ -322,6 +366,9 @@ main {
       align-items: center;
       position: relative;
       padding: 80px 0;
+      @media screen and (max-width: 800px) {
+        padding: 30px 0;
+      }
       .gauge__container {
         position: relative;
         .mychartValue {
@@ -406,7 +453,7 @@ main {
   color: #000;
   padding: 5rem 8rem;
   @media screen and (max-width: 800px) {
-    padding: 4rem 2rem;
+    padding: 0rem 2rem 3rem 2rem;
   }
   .form__signup {
     display: flex;

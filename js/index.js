@@ -1,7 +1,7 @@
 //////scroll-reveal----
 var headings = document.querySelectorAll("h2");
 var paras = document.querySelectorAll("p");
-var images = document.querySelectorAll("img");
+var images = document.querySelectorAll(".reveal__img");
 
 ScrollReveal().reveal(headings, {
   delay: 500,
@@ -24,7 +24,7 @@ function init__gauge(data) {
     lineWidth: 0.35,
     radiusScale: 1.1,
     pointer: {
-      length: 0.41, // // Relative to gauge radius
+      length: 0.41,
       strokeWidth: 0.04,
       color: "#000000",
     },
@@ -109,6 +109,7 @@ ScrollTrigger.saveStyles(".container-hero div");
 
 const powerPackVideo = document.querySelector("#power__pack__bar");
 const powerPackSixVideo = document.querySelector("#power__pack__six");
+const chocolateSplashVideo = document.querySelector("#chocolate__splash__bar");
 
 // const scrollVideo = (video) => {
 //   const videoLength = video.duration;
@@ -160,30 +161,33 @@ powerPackVideo.autoplay = true;
 powerPackVideo.loop = true;
 powerPackSixVideo.autoplay = true;
 powerPackSixVideo.loop = true;
+chocolateSplashVideo.autoplay = true;
+// chocolateSplashVideo.loop = true;
 powerPackVideo.load();
 powerPackSixVideo.load();
+chocolateSplashVideo.load();
 
 ////////////gsap-videos///////////
 
 //////gsap-abotus-animation//////
 const aboutUsImage = document.querySelector(".about__image img");
 
-ScrollTrigger.matchMedia({
-  // desktop
-  "(min-width: 800px)": function () {
-    ScrollTrigger.create({
-      trigger: aboutUsImage,
-      start: "top 80%",
-      end: "bottom 80%",
-      scrub: true,
-      animation: gsap.fromTo(
-        aboutUsImage,
-        { x: "100%", rotate: 180 },
-        { x: "0%", rotate: 0, duration: 2 }
-      ),
-    });
-  },
+// ScrollTrigger.matchMedia({
+//   // desktop
+//   "(min-width: 800px)": function () {
+ScrollTrigger.create({
+  trigger: aboutUsImage,
+  start: "top 80%",
+  end: "bottom 80%",
+  scrub: true,
+  animation: gsap.fromTo(
+    aboutUsImage,
+    { x: "100%", rotate: 180 },
+    { x: "0%", rotate: 0, duration: 2 }
+  ),
 });
+//   },
+// });
 //////gsap-abotus-animation//////
 
 /////form/////

@@ -68,11 +68,6 @@ main {
   padding: 100px 0;
 }
 
-@media screen and (max-width: 800px) {
-  .powerpack__energy {
-    min-height: 100vh;
-  }
-}
 .powerpack__energy .video__background {
   position: relative;
   height: 100%;
@@ -103,7 +98,7 @@ main {
     position: relative;
     color: #000;
     width: 100%;
-    padding: 2rem;
+    padding: 0 2rem;
   }
 }
 .powerpack__energy .right__container .inner__container h2 {
@@ -114,7 +109,7 @@ main {
 }
 @media screen and (max-width: 800px) {
   .powerpack__energy .right__container .inner__container h2 {
-    font-size: 15vw;
+    display: none;
   }
 }
 .powerpack__energy .right__container .inner__container p {
@@ -127,6 +122,7 @@ main {
 @media screen and (max-width: 800px) {
   .powerpack__energy .right__container .inner__container p {
     max-width: 80%;
+    margin: 1rem 0 2.5rem 0;
   }
 }
 .powerpack__energy .right__container .inner__container a {
@@ -147,19 +143,68 @@ main {
     color: rgb(0, 0, 0);
   }
 }
-
-.protein__waffer__bar {
-  background-color: white;
-  color: #000;
-  padding: 10rem 5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: relative;
-  overflow: visible;
+.powerpack__energy .right__container.mobile {
+  display: none;
 }
 @media screen and (max-width: 800px) {
+  .powerpack__energy .right__container.mobile {
+    display: block;
+    position: absolute;
+    padding: 0;
+    width: 50%;
+    top: 10%;
+    right: -8%;
+  }
+  .powerpack__energy .right__container.mobile h2 {
+    display: block;
+    color: white;
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .protein__waffer__bar {
-    padding: 10rem 2rem;
+    padding: 50px 0;
+  }
+}
+.protein__waffer__bar .protein__waffer__bar__video {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-left: 9%;
+}
+@media screen and (max-width: 800px) {
+  .protein__waffer__bar .protein__waffer__bar__video {
+    padding-left: 0;
+  }
+}
+.protein__waffer__bar .protein__waffer__bar__video .pr video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.protein__waffer__bar .left__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  padding: 2rem 4rem;
+  color: rgb(0, 0, 0);
+}
+@media screen and (max-width: 800px) {
+  .protein__waffer__bar .left__container {
+    position: relative;
+    color: #000;
+    width: 100%;
+    padding: 2rem;
+    align-items: flex-start;
   }
 }
 .protein__waffer__bar .text__btn {
@@ -178,25 +223,6 @@ main {
     font-size: 15vw;
   }
 }
-.protein__waffer__bar .floating__waffer__img img {
-  position: absolute;
-  top: 30%;
-  bottom: 0;
-  right: -25%;
-  width: 80%;
-  height: 70%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-@media screen and (max-width: 800px) {
-  .protein__waffer__bar .floating__waffer__img img {
-    right: -18%;
-  }
-}
 
 .image__grid__btn {
   background-color: white;
@@ -209,7 +235,7 @@ main {
 @media screen and (max-width: 800px) {
   .image__grid__btn {
     grid-template-columns: auto;
-    padding: 10rem 2rem;
+    padding: 5rem 2rem;
   }
 }
 .image__grid__btn .left__image__up {
@@ -338,7 +364,7 @@ main {
 }
 @media screen and (max-width: 800px) {
   .early__bird__discount__section {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
   }
 }
 .early__bird__discount__section h2 {
@@ -362,6 +388,7 @@ main {
   .early__bird__discount__section .count__meter__container {
     flex-direction: column;
     padding: 3rem 0;
+    gap: 20px;
   }
 }
 .early__bird__discount__section .count__meter__container .gauge__canvas__text {
@@ -371,6 +398,11 @@ main {
   align-items: center;
   position: relative;
   padding: 80px 0;
+}
+@media screen and (max-width: 800px) {
+  .early__bird__discount__section .count__meter__container .gauge__canvas__text {
+    padding: 30px 0;
+  }
 }
 .early__bird__discount__section .count__meter__container .gauge__canvas__text .gauge__container {
   position: relative;
@@ -457,7 +489,7 @@ main {
 }
 @media screen and (max-width: 800px) {
   .signup__early__discount {
-    padding: 4rem 2rem;
+    padding: 0rem 2rem 3rem 2rem;
   }
 }
 .signup__early__discount .form__signup {

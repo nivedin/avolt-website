@@ -129,6 +129,7 @@
             <img
               src="./assets/images/home/avolt_white.png"
               alt="avolt_banner_image"
+              class="reveal__img"
             />
           </div>
           <a
@@ -168,6 +169,16 @@
           >
             <source src="./assets/videos/features.mp4" type="video/mp4" />
           </video>
+          <div class="right__container mobile">
+            <div class="inner__container">
+              <h2>
+                POWER <br />
+                PACK <br />
+                ENERGY <br />
+                BAR
+              </h2>
+            </div>
+          </div>
           <div class="right__container">
             <div class="inner__container">
               <h2>
@@ -192,26 +203,34 @@
         </div>
       </section>
 
-      <section>
-        <div class="container protein__waffer__bar">
-          <div class="text__btn">
-            <h2>
-              PROTEIN <br />
-              WAFFER <br />
-              BAR
-            </h2>
-            <a
-              href="#signup__section"
-              class="button secondary small uppercase font-semibold"
-            >
-              Sign Up
-            </a>
-          </div>
-          <div class="floating__waffer__img">
-            <img
-              src="./assets/images/home/wafers-with-chocolate-splash.png"
-              alt="splashing_waffer_image"
+      <section class="protein__waffer__bar">
+        <div class="protein__waffer__bar__video">
+          <video
+            playsinline="true"
+            webkit-playsinline="true"
+            preload="metadata"
+            muted="muted"
+            id="chocolate__splash__bar"
+          >
+            <source
+              src="./assets/videos/chocolate-splash.mp4"
+              type="video/mp4"
             />
+          </video>
+          <div class="left__container">
+            <div class="text__btn">
+              <h2>
+                PROTEIN <br />
+                WAFFER <br />
+                BAR
+              </h2>
+              <a
+                href="#signup__section"
+                class="button secondary small uppercase font-semibold"
+              >
+                Sign Up
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -222,6 +241,7 @@
             <img
               src="./assets/images/home/grid-image-1.jpg"
               alt="grid-image-1"
+              class="reveal__img"
             />
           </div>
           <div class="image__para__btn">
@@ -229,6 +249,7 @@
               <img
                 src="./assets/images/home/grid-image-2.png"
                 alt="grid-image-2"
+                class="reveal__img"
               />
             </div>
             <div class="para__btn">
@@ -279,9 +300,6 @@
             <source src="./assets/videos/box -animation.mp4" type="video/mp4" />
           </video>
         </div>
-        <!-- <div class="floating__waffer__img">
-              <img src="/images/image-1.jpg" loading="lazy" alt="waffer" />
-            </div> -->
       </section>
 
       <section>
@@ -416,7 +434,7 @@
               <p>CONNECT WITH US</p>
               <div class="social__icons">
                 <a href="/">
-                  <svg
+                  <!-- <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -431,9 +449,14 @@
                       class="bg-black"
                       d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
                     ></path></svg
-                ></a>
+                > -->
+                  <img
+                    src="./assets/icons/facebook-icon.png"
+                    alt="facebook-icon"
+                  />
+                </a>
                 <a href="/">
-                  <svg
+                  <!-- <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -456,14 +479,16 @@
                       d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
                     ></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
-                ></a>
+                > -->
+                  <img src="./assets/icons/insta-icon.png" alt="insta-icon" />
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="footer__bottom">
           <p class="text-sm text-center font-bold">
-            © AVOSS HEALTHCARE PVT.LTD. <span id="footer__year"></span>. All
+            © AVOSS HEALTHCARE PVT. LTD. <span id="footer__year"></span>. All
             Rights Reserved.
           </p>
         </div>

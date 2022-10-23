@@ -90,6 +90,7 @@
 @media screen and (max-width: 1024px) {
   .footer .footer__upper .connect__withus {
     flex: 0.5;
+    padding-left: 0;
   }
 }
 .footer .footer__upper .connect__withus .connect__withus__inner {
@@ -106,10 +107,13 @@
 }
 .footer .footer__upper .connect__withus .social__icons a {
   font-size: 1.5rem;
-  background: #fff;
   color: #000;
   border-radius: 4px;
   padding: 2px;
+}
+.footer .footer__upper .connect__withus .social__icons a img {
+  width: 25px;
+  height: 25px;
 }
 @media screen and (max-width: 800px) {
   .footer .footer__upper .connect__withus .social__icons {
